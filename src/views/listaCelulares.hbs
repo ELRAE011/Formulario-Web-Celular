@@ -1,0 +1,34 @@
+<h2>Lista de Celulares</h2>
+<table>
+    <thead>
+        <tr>
+            <th>INDEX</th>
+            <th>Clave</th>
+            <th>Marca</th>
+            <th>Precio</th>
+            <th>Fecha De Lanzamiento</th>
+            <th>Ram Del Celular</th>
+            <th>Almacenamiento Del Celular</th>
+            <th>Cantidad De Camaras Del Celular</th>
+        </tr>
+    </thead>
+    <tbody>
+        {{#each celulares}}
+        <tr>
+            <td>{{@index}}</td>
+            <td>{{clave}}</td>
+            <td>{{marca}}</td>
+            <td>{{precio}}</td>
+            <td>{{fechaLanzamiento}}</td>
+            <td>{{ram}}</td>
+            <td>{{almacenamiento}}</td>
+            <td>{{cantCamaras}}</td>
+            <td>
+                <button>Estatus</button>
+                <a href="/update/"{{_id}}>Actualizar</a>
+                <button>Eliminar</button>
+            </td>
+        </tr>
+        {{/each}}
+    </tbody>
+</table>
